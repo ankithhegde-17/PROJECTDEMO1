@@ -10,6 +10,20 @@ A hackathon-ready HR intelligence MVP. It combines recruitment, attendance, perf
 
 ## Quick start
 
+### One-command Windows start
+
+From the workspace root, run:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\start.ps1
+```
+
+The launcher checks whether the backend and frontend are already healthy before starting them, so it will not create duplicate port `8000` or `5173` processes. On the first setup, add `-Install` to install the backend requirements:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\start.ps1 -Install
+```
+
 ### Backend
 
 ```powershell

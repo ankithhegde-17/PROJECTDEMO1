@@ -124,3 +124,5 @@ class QwenService:
         context=build_context(db,department); schema='{"answer":string,"evidence_ids":[string],"recommendations":[string],"limitations":[string],"confidence":number_0_to_1}'
         content,ids=self._request(schema,{**context,"question":question},"hr_question"); result=self._validate(AskResponse,content,ids)
         return {"context":context,**result.model_dump()}
+    answer = ask
+
